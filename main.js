@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Obtém a imagem do canvas e a passa para o Tesseract.js para reconhecimento de texto
         Tesseract.recognize(
-            canvas.toDataURL('image/png'),
+            canvas.toDataURL('image/jpeg'),
             'eng',
             { logger: info => console.log(info) } // Use isso para depurar resultados
         ).then(({ data: { text } }) => {
